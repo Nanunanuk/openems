@@ -256,7 +256,7 @@ public class Wago extends AbstractOpenemsModbusComponent implements DigitalOutpu
 				kanals[j] = new FieldbusModuleKanal(channelName, channelType);
 			}
 			// Create FieldbusModule instance using factory method
-			if(moduleArtikelnr.equals("750-496/000-000") || moduleArtikelnr.equals("750-497/000-000")) {
+			if(moduleArtikelnr.equals("750-496/000-000") || moduleArtikelnr.equals("750-497/000-000") || moduleArtikelnr.equals("750-451/000-000")) {
 				FieldbusAnalogModule module = factory.ofAnalog(this, moduleArtikelnr, moduleType, kanals, inputOffset, outputOffset);
 				inputOffset += module.getInputCoils();
 				outputOffset += module.getOutputCoils();

@@ -100,4 +100,8 @@ public class MeterAbbB23Mbus extends AbstractOpenemsMbusComponent
 		this.channelDataRecordsList.add(new ChannelRecord(channel(ChannelId.DEVICE_ID), DataType.DeviceId));
 	}
 
+	@Override
+	public String debugLog() {
+		return this.getActivePowerL1().asString();
+	}
 }
